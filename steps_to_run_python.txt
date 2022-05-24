@@ -1,0 +1,27 @@
+To run Python code from the jump server via Git Bash
+1. Check if you have python installed
+Administrator@EC2AMAZ-J1DND18 MINGW64 ~/documents/bin
+$ which  python
+/c/Python38/python
+
+
+2. If you do then, to be able to run example code we also need to install PIP (Ref: https://www.codegrepper.com/code-examples/shell/install+pip+git+bash):
+i. $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+ii. $ python get-pip.py
+
+3. Install the "requests" python package using PIP:
+i. $ python -m pip install requests
+
+4. Copy paste the Python code to a file
+Administrator@EC2AMAZ-J1DND18 MINGW64 ~/documents/bin
+$ ls -lhtr
+total 3.0K
+-rw-r--r-- 1 Administrator 197121 149 May 24 15:39 check.py
+-rw-r--r-- 1 Administrator 197121 310 May 24 15:52 check2.py
+-rw-r--r-- 1 Administrator 197121 250 May 24 15:53 check3.py
+
+5. To run the check (make sure the .py file has execute perms)
+$ python ./check.py
+C:\Python38\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'r016team04prod.computerlab.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+b'<html>\n<head>\n    <title>Home</title>\n    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n</head>\n<body>\n\n<h1>Home</h1>\n<br><br><br><br>\n<h3>\n<a href="/buy">Submit a Buy Order</a>\n<br>\n<a href="/sell">Submit a Sell Order</a>\n<br>\n<a href="/history">View Order History</a>\n<br>\n<a href="/portfolio">View Portfolio</a>\n<br>\n<a href="/status">View App Status</a>\n</h3>\n'
